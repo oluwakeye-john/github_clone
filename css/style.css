@@ -279,7 +279,7 @@ body *:after {
 @media (max-width: 768px) {
   .page-content__right {
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.4rem 0;
   }
 }
 
@@ -481,6 +481,103 @@ body *:after {
   font-weight: 300;
   line-height: 24px;
   color: #586069;
+}
+
+.repositories {
+  width: 100%;
+}
+.repositories__search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eaecef;
+}
+@media (max-width: 768px) {
+  .repositories__search {
+    flex-wrap: wrap;
+  }
+}
+.repositories__search__box {
+  margin-right: 16px;
+  width: 100%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #eaecef;
+  border-radius: 6px;
+  outline: none;
+}
+.repositories__search__btn {
+  margin-left: 4px;
+  width: auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .repositories__search__btn {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-right: 4px;
+  }
+}
+
+.repository-card {
+  padding: 24px 0;
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.repository-card__left {
+  flex: 1;
+}
+.repository-card__name {
+  color: #0366d6;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+.repository-card__base {
+  margin-top: 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #586069;
+}
+.repository-card__base__language {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+.repository-card__base__language__dot {
+  margin-right: 4px;
+  background-color: #f1e05a;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.repository-card__description {
+  width: 75%;
+  color: #586069;
+  margin-top: 6px;
+}
+.repository-card__star {
+  font-size: 12px;
+  line-height: 18px;
+  color: #24292e;
+  display: flex;
+  align-items: center;
+}
+.repository-card__star svg {
+  fill: #6a737d;
+  margin-right: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

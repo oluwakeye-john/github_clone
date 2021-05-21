@@ -176,7 +176,7 @@ body {
 }
 
 .subnav {
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid $borderColor;
     position: sticky;
     top: 0;
     left: 0;
@@ -279,7 +279,7 @@ body {
 
         @include mobile {
             width: 100%;
-            padding: 1rem 0;
+            padding: 0.4rem 0;
         }
     }
 }
@@ -375,7 +375,7 @@ body {
         z-index: 2;
 
         background-color: #fff;
-        border: 1px solid #eaecef;
+        border: 1px solid $borderColor;
         box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
         border-radius: 2em;
         display: flex;
@@ -423,7 +423,7 @@ body {
     }
 
     &__follow {
-        border-bottom: 1px solid #eaecef;
+        border-bottom: 1px solid $borderColor;
         .btn {
             margin-bottom: 16px;
         }
@@ -492,6 +492,109 @@ body {
                 line-height: 24px;
                 color: $textAlt1;
             }
+        }
+    }
+}
+
+.repositories {
+    width: 100%;
+    &__search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid $borderColor;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
+        &__box {
+            margin-right: 16px;
+            width: 100%;
+            padding: 5px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            border: 1px solid $borderColor;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        &__btn {
+            margin-left: 4px;
+            width: auto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+                margin-left: 0;
+                margin-top: 8px;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.repository-card {
+    padding: 24px 0;
+    border-bottom: 1px solid $borderColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        flex: 1;
+    }
+
+    &__name {
+        color: $linkColor;
+        font-weight: 600;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__base {
+        margin-top: 16px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        color: $textAlt2;
+
+        &__language {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            &__dot {
+                margin-right: 4px;
+                background-color: #f1e05a;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__description {
+        width: 75%;
+        color: $textAlt2;
+        margin-top: 6px;
+    }
+
+    &__star {
+        font-size: 12px;
+        line-height: 18px;
+        color: $textPrimary;
+        display: flex;
+        align-items: center;
+        svg {
+            fill: #6a737d;
+            margin-right: 4px;
         }
     }
 }
