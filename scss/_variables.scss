@@ -4,6 +4,10 @@ $headerTextColor: #fff;
 $headerSearchBorder: #444d56;
 $headerSearchBg: #24292e;
 
+$textPrimary: #24292e;
+
+$primaryBtn: #fafbfc;
+
 $width-xs: 0;
 $width-sm: 544px;
 $width-md: 768px;
@@ -31,7 +35,7 @@ $width-xl: 1280px;
 @mixin page-padding {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 16px;
     @include mobile() {
         padding: 0 16px;
     }

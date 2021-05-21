@@ -1,6 +1,8 @@
 body {
+  color: #24292e;
   margin: 0;
   font-size: 14px;
+  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body *,
@@ -170,15 +172,15 @@ body *:after {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 3;
+  margin-top: 1.68rem;
   background-color: #fff;
-  margin-top: 2rem;
 }
 .subnav__container {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
 }
 @media (max-width: 768px) {
   .subnav__container {
@@ -198,36 +200,187 @@ body *:after {
   display: flex;
   align-items: center;
   overflow-x: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media (max-width: 768px) {
   .subnav__content {
     width: 100%;
+    padding: 0;
   }
 }
 .subnav__item {
-  padding: 3px 16px;
+  display: flex;
+  padding: 8px 16px;
   cursor: pointer;
+  align-items: center;
+  color: #24292e;
+  line-height: 30px;
+  text-align: center;
   border-bottom: 2px solid transparent;
+}
+.subnav__item .badge {
+  margin-left: 8px;
+  border-radius: 2em;
+  background-color: rgba(209, 213, 218, 0.5);
+  padding: 0 6px;
+  line-height: unset;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.subnav__item .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: #959da5;
+}
+@media (max-width: 768px) {
+  .subnav__item .icon {
+    display: none;
+  }
 }
 .subnav__item:hover {
   border-bottom: 2px solid #d1d5d8;
 }
 .subnav__item__item--active {
   border-bottom: 2px solid #f9826c;
+  font-weight: 600;
+}
+.subnav__item__item--active .icon {
+  fill: #24292e;
 }
 .subnav__item__item--active:hover {
   border-bottom: 2px solid #f9826c;
 }
 
-.page-container {
+.page-content {
+  z-index: 5;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
+  display: flex;
 }
 @media (max-width: 768px) {
-  .page-container {
+  .page-content {
     padding: 0 16px;
   }
+}
+@media (max-width: 768px) {
+  .page-content {
+    flex-direction: column;
+  }
+}
+.page-content__right {
+  width: 75%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (max-width: 768px) {
+  .page-content__right {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  line-height: 20px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #fafbfc;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  padding: 5px 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #f3f4f6;
+}
+
+.user-profile-desktop {
+  width: 25%;
+  padding: 0 16px;
+}
+@media (max-width: 768px) {
+  .user-profile-desktop {
+    display: none;
+  }
+}
+.user-profile-desktop__section-box {
+  margin: 1.2rem 0;
+}
+.user-profile-desktop__follow {
+  width: 100%;
+  text-align: center;
+}
+.user-profile-desktop__name {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.user-profile-desktop__username {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
+}
+.user-profile-desktop__image {
+  position: relative;
+  margin-top: -32px;
+  height: auto;
+}
+.user-profile-desktop__image img {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 100%;
+}
+.user-profile-desktop__stats {
+  display: flex;
+  align-items: center;
+}
+.user-profile-desktop__status {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  margin-bottom: 32px;
+  margin-left: -40px;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #eaecef;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+  border-radius: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+}
+.user-profile-desktop__status__box {
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-profile-desktop__status__text {
+  transition: 0.3s;
+  max-width: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  opacity: 0;
+}
+.user-profile-desktop__status:hover .user-profile-desktop__status__text {
+  overflow-x: visible;
+  opacity: 1;
+  padding-right: 15px;
+  max-width: 544px;
 }
 
 /*# sourceMappingURL=style.css.map */
