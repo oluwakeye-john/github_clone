@@ -1,0 +1,29 @@
+$headerBg: #24292e;
+$headerTextColor: #fff;
+
+$headerSearchBorder: #444d56;
+$headerSearchBg: #24292e;
+
+$width-xs: 0;
+$width-sm: 544px;
+$width-md: 768px;
+$width-lg: 1012px;
+$width-xl: 1280px;
+
+@mixin mobile {
+    @media (max-width: #{$width-md}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$width-md}) and (max-width: #{$width-lg - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$width-lg}) {
+        @content;
+    }
+}
