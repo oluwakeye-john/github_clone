@@ -50,7 +50,7 @@ body *:after {
   width: 100%;
   color: #fff;
   background-color: #24292e;
-  padding: 0.9rem 2rem;
+  padding: 0.85rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,6 +162,72 @@ body *:after {
 }
 .header__search .slash {
   height: 100%;
+}
+
+.subnav {
+  border-bottom: 1px solid #eaecef;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+.subnav__container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) {
+  .subnav__container {
+    padding: 0 16px;
+  }
+}
+.subnav__side {
+  width: 25%;
+}
+@media (max-width: 768px) {
+  .subnav__side {
+    display: none;
+  }
+}
+.subnav__content {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+@media (max-width: 768px) {
+  .subnav__content {
+    width: 100%;
+  }
+}
+.subnav__item {
+  padding: 3px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.subnav__item:hover {
+  border-bottom: 2px solid #d1d5d8;
+}
+.subnav__item__item--active {
+  border-bottom: 2px solid #f9826c;
+}
+.subnav__item__item--active:hover {
+  border-bottom: 2px solid #f9826c;
+}
+
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,3 +27,12 @@ $width-xl: 1280px;
         @content;
     }
 }
+
+@mixin page-padding {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    @include mobile() {
+        padding: 0 16px;
+    }
+}

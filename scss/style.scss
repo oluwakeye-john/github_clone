@@ -54,7 +54,7 @@ body {
         width: 100%;
         color: $headerTextColor;
         background-color: $headerBg;
-        padding: 0.9rem 2rem;
+        padding: 0.85rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -171,4 +171,62 @@ body {
             height: 100%;
         }
     }
+}
+
+.subnav {
+    border-bottom: 1px solid #eaecef;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    margin-top: 2rem;
+
+    &__container {
+        display: flex;
+        @include page-padding;
+    }
+
+    &__side {
+        width: 25%;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        padding: 3px 16px;
+        cursor: pointer;
+
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid #d1d5d8;
+        }
+
+        &__item--active {
+            border-bottom: 2px solid #f9826c;
+
+            &:hover {
+                border-bottom: 2px solid #f9826c;
+            }
+        }
+    }
+}
+
+.page-container {
+    @include page-padding;
 }
