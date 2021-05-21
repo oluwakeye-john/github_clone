@@ -332,7 +332,11 @@ body {
         font-style: normal;
         font-weight: 300;
         line-height: 24px;
-        color: #586069;
+        color: $textAlt1;
+    }
+
+    &__bio {
+        font-size: 16px;
     }
 
     &__image {
@@ -345,6 +349,18 @@ body {
             width: 100%;
         }
     }
+    &__list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        svg {
+            fill: $textAlt1;
+        }
+        span {
+            margin-left: 5px;
+        }
+    }
+
     &__stats {
         display: flex;
         align-items: center;
@@ -389,6 +405,93 @@ body {
             opacity: 1;
             padding-right: 15px;
             max-width: 544px;
+        }
+    }
+}
+
+.user-profile-mobile {
+    display: none;
+
+    @include mobile {
+        @include page-padding;
+        display: block;
+    }
+
+    .mobile-profile-icon {
+        width: 16px;
+        fill: #6a737d;
+    }
+
+    &__follow {
+        border-bottom: 1px solid #eaecef;
+        .btn {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__status {
+        margin: 8px 0;
+        border-radius: 6px;
+        padding: 4px 10px;
+        border: 1px solid #e1e4e8;
+        line-height: 20px;
+        font-size: 12px;
+        span {
+            margin-left: 6px;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__bio {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        svg {
+            fill: $textAlt1;
+        }
+        span {
+            margin-left: 5px;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        &__image {
+            width: 16.6667%;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+
+        &__content {
+            padding: 16px 0;
+            h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 1.25;
+            }
+            p {
+                margin: 0;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                color: $textAlt1;
+            }
         }
     }
 }

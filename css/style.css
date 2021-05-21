@@ -330,6 +330,9 @@ body *:after {
   line-height: 24px;
   color: #586069;
 }
+.user-profile-desktop__bio {
+  font-size: 16px;
+}
 .user-profile-desktop__image {
   position: relative;
   margin-top: -32px;
@@ -339,6 +342,17 @@ body *:after {
   cursor: pointer;
   border-radius: 50%;
   width: 100%;
+}
+.user-profile-desktop__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.user-profile-desktop__list-item svg {
+  fill: #586069;
+}
+.user-profile-desktop__list-item span {
+  margin-left: 5px;
 }
 .user-profile-desktop__stats {
   display: flex;
@@ -381,6 +395,92 @@ body *:after {
   opacity: 1;
   padding-right: 15px;
   max-width: 544px;
+}
+
+.user-profile-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .user-profile-mobile {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: block;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .user-profile-mobile {
+    padding: 0 16px;
+  }
+}
+.user-profile-mobile .mobile-profile-icon {
+  width: 16px;
+  fill: #6a737d;
+}
+.user-profile-mobile__follow {
+  border-bottom: 1px solid #eaecef;
+}
+.user-profile-mobile__follow .btn {
+  margin-bottom: 16px;
+}
+.user-profile-mobile__status {
+  margin: 8px 0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  border: 1px solid #e1e4e8;
+  line-height: 20px;
+  font-size: 12px;
+}
+.user-profile-mobile__status span {
+  margin-left: 6px;
+}
+.user-profile-mobile__stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.user-profile-mobile__bio {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.user-profile-mobile__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.user-profile-mobile__list-item svg {
+  fill: #586069;
+}
+.user-profile-mobile__list-item span {
+  margin-left: 5px;
+}
+.user-profile-mobile__details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.user-profile-mobile__details__image {
+  width: 16.6667%;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.user-profile-mobile__details__content {
+  padding: 16px 0;
+}
+.user-profile-mobile__details__content h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.25;
+}
+.user-profile-mobile__details__content p {
+  margin: 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
 }
 
 /*# sourceMappingURL=style.css.map */
