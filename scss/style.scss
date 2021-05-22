@@ -92,7 +92,7 @@ body {
             }
         }
 
-        .is-open {
+        .is-hamburger-open {
             padding-top: 1rem;
             display: flex;
         }
@@ -200,19 +200,18 @@ body {
         display: flex;
         align-items: center;
 
+        .show-vcard {
+            transition: opacity 0.2s;
+            opacity: 1;
+            pointer-events: all;
+        }
+
         &__vcard {
             padding: 0 16px;
             display: flex;
             align-items: center;
             opacity: 0;
-
             pointer-events: none;
-
-            &--show {
-                transition: opacity 0.2s;
-                opacity: 1;
-                pointer-events: all;
-            }
 
             &__image {
                 width: 32px;
