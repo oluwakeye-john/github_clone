@@ -102,22 +102,19 @@
 
     <div class="user-profile-mobile">
       <div class="user-profile-mobile__details">
-        <img class="user-profile-mobile__details__image"
-          src="https://i.picsum.photos/id/996/200/200.jpg?hmac=nRtkfqKyD3p2uHiFO5LmGt31UcH3NKWg80H5yUkZ8_k" />
+        <img class="user-profile-mobile__details__image" data-user="avatar" src="" />
         <div class="user-profile-mobile__details__content">
-          <h2>Oluwakeye John</h2>
-          <p>oluwakeye-john</p>
+          <h2 data-user="fullname"></h2>
+          <p data-user="username"></p>
         </div>
 
       </div>
       <div class="user-profile-mobile__status">
-        💻
-        <span>Let's build something awesome</span>
+        <span data-user="status-emoji"></span>
+        <span data-user="status-message"></span>
       </div>
 
-      <div class="user-profile-mobile__bio">
-        LifeLong Learner & Javascript Developer
-      </div>
+      <div class="user-profile-mobile__bio" data-user="bio"></div>
 
       <div>
         <div class="user-profile-mobile__list-item">
@@ -127,7 +124,7 @@
               d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z">
             </path>
           </svg>
-          <span>olajidejoshua4real@gmail.com</span>
+          <span data-user="email"></span>
         </div>
         <div class="user-profile-mobile__list-item">
           <svg class="mobile-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
@@ -147,9 +144,9 @@
           </path>
         </svg>
         &nbsp;
-        36 followers
+        <span data-user="followers"></span>
         &middot;
-        36 following
+        <span data-user="following"></span>
         &middot;
         &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -158,7 +155,7 @@
           </path>
         </svg>
         &nbsp;
-        36
+        <span data-user="stars"></span>
       </div>
 
       <div class="user-profile-mobile__follow">
@@ -170,10 +167,10 @@
       <div class="subnav__container">
         <div class="subnav__side">
           <div id="desktop-vcard" class="subnav__side__vcard">
-            <img class="subnav__side__vcard__image" src="https://avatars.githubusercontent.com/u/42160061?v=4" />
+            <img class="subnav__side__vcard__image" src="" data-user="avatar" />
             <div class="subnav__side__vcard__content">
-              <h5 class="subnav__side__vcard__content__name">joshtom</h5>
-              <button class="btn vcard-follow">Follow</button>
+              <h5 class="subnav__side__vcard__content__name" data-user="username"></h5>
+              <button class="btn vcard-follow">Unfollow</button>
             </div>
           </div>
         </div>
@@ -218,26 +215,26 @@
     <div class="page-content">
       <div class="user-profile-desktop">
         <div class="user-profile-desktop__image">
-          <img src="https://avatars.githubusercontent.com/u/42160061?v=4" />
+          <img src="" data-user="avatar" />
           <div class="user-profile-desktop__status">
             <div class="user-profile-desktop__status__box">
-              <span>💻</span>
+              <span data-user="status-emoji"></span>
             </div>
             <div class="user-profile-desktop__status__text">
-              <span>Let's build something awesome</span>
+              <span data-user="status-message"></span>
             </div>
           </div>
         </div>
 
         <div class="user-profile-desktop__section-box">
-          <h2 class="user-profile-desktop__name">olajide joshua</h2>
-          <span class="user-profile-desktop__username">oluwakeyejohn</span>
+          <h2 data-user="fullname" class="user-profile-desktop__name"></h2>
+          <span data-user="username" class="user-profile-desktop__username"></span>
         </div>
         <div class="user-profile-desktop__section-box">
           <button class="btn">Follow</button>
         </div>
         <div class="user-profile-desktop__section-box">
-          <div class="user-profile-desktop__bio">LifeLong Learner & Javascript Developer</div>
+          <div data-user="bio" class="user-profile-desktop__bio"></div>
         </div>
 
         <div class="user-profile-desktop__section-box user-profile-desktop__stats">
@@ -247,9 +244,9 @@
             </path>
           </svg>
           &nbsp;
-          36 followers
+          <span data-user="followers"> </span>
           &middot;
-          36 following
+          <span data-user="following"> </span>
           &middot;
           &nbsp;
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -258,7 +255,7 @@
             </path>
           </svg>
           &nbsp;
-          36
+          <span data-user="stars"></span>
         </div>
 
         <div class="user-profile-desktop__section-box">
@@ -277,7 +274,7 @@
                 d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z">
               </path>
             </svg>
-            <span>olajidejoshua4real@gmail.com</span>
+            <span data-user="email"></span>
           </div>
         </div>
       </div>
@@ -307,9 +304,9 @@
               </svg>
             </button>
           </div>
-          <div>
+          <div data-user="repositories">
 
-            <div class="repository-card">
+            <!-- <div class="repository-card">
               <div class="repository-card__left">
                 <h4 class="repository-card__name">contact-backend</h4>
                 <div class="repository-card__description">
@@ -335,147 +332,7 @@
                   Star
                 </button>
               </div>
-            </div>
-
-            <div class="repository-card">
-              <div class="repository-card__left">
-                <h4 class="repository-card__name">global-market</h4>
-                <div class="repository-card__description">
-                  To log your health status and share it with your doctor quickly
-                </div>
-                <div class="repository-card__base">
-                  <div class="repository-card__base__language">
-                    <div class="repository-card__base__language__dot"></div>
-                    JavaScript
-                  </div>
-                  <div>
-                    Updated 10 days ago
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="btn repository-card__star">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                    </path>
-                  </svg>
-                  Star
-                </button>
-              </div>
-            </div>
-
-            <div class="repository-card">
-              <div class="repository-card__left">
-                <h4 class="repository-card__name">contact-backend</h4>
-                <div class="repository-card__description">
-                  To log your health status and share it with your doctor quickly
-                </div>
-                <div class="repository-card__base">
-                  <div class="repository-card__base__language">
-                    <div class="repository-card__base__language__dot"></div>
-                    JavaScript
-                  </div>
-                  <div>
-                    Updated 10 days ago
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="btn repository-card__star">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                    </path>
-                  </svg>
-                  Star
-                </button>
-              </div>
-            </div>
-
-            <div class="repository-card">
-              <div class="repository-card__left">
-                <h4 class="repository-card__name">contact-backend</h4>
-                <div class="repository-card__description">
-                  To log your health status and share it with your doctor quickly
-                </div>
-                <div class="repository-card__base">
-                  <div class="repository-card__base__language">
-                    <div class="repository-card__base__language__dot"></div>
-                    JavaScript
-                  </div>
-                  <div>
-                    Updated 10 days ago
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="btn repository-card__star">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                    </path>
-                  </svg>
-                  Star
-                </button>
-              </div>
-            </div>
-
-            <div class="repository-card">
-              <div class="repository-card__left">
-                <h4 class="repository-card__name">contact-backend</h4>
-                <div class="repository-card__description">
-                  To log your health status and share it with your doctor quickly
-                </div>
-                <div class="repository-card__base">
-                  <div class="repository-card__base__language">
-                    <div class="repository-card__base__language__dot"></div>
-                    JavaScript
-                  </div>
-                  <div>
-                    Updated 10 days ago
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="btn repository-card__star">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                    </path>
-                  </svg>
-                  Star
-                </button>
-              </div>
-            </div>
-
-            <div class="repository-card">
-              <div class="repository-card__left">
-                <h4 class="repository-card__name">contact-backend</h4>
-                <div class="repository-card__description">
-                  To log your health status and share it with your doctor quickly
-                </div>
-                <div class="repository-card__base">
-                  <div class="repository-card__base__language">
-                    <div class="repository-card__base__language__dot"></div>
-                    JavaScript
-                  </div>
-                  <div>
-                    Updated 10 days ago
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="btn repository-card__star">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                    <path fill-rule="evenodd"
-                      d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                    </path>
-                  </svg>
-                  Star
-                </button>
-              </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -515,7 +372,8 @@
   </main>
 
 
-  <script src="./js/main.js"></script>
+  <script src="./js/controls.js"></script>
+  <script src="./js/data.js"></script>
 </body>
 
 </html>

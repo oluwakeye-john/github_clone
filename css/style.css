@@ -357,6 +357,7 @@ body *:after {
   margin: 0;
   font-size: 26px;
   line-height: 1.3;
+  color: #24292e;
   font-weight: 600;
 }
 .user-profile-desktop__username {
@@ -466,6 +467,8 @@ body *:after {
   border: 1px solid #e1e4e8;
   line-height: 20px;
   font-size: 12px;
+  display: flex;
+  align-items: center;
 }
 .user-profile-mobile__status span {
   margin-left: 6px;
