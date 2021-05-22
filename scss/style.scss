@@ -176,7 +176,6 @@ body {
 }
 
 .subnav {
-    border-bottom: 1px solid $borderColor;
     position: sticky;
     top: 0;
     left: 0;
@@ -187,11 +186,50 @@ body {
 
     &__container {
         display: flex;
+        border-bottom: 1px solid $borderColor;
         @include page-padding;
     }
 
     &__side {
         width: 25%;
+        display: flex;
+        align-items: center;
+
+        &__vcard {
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+            pointer-events: none;
+
+            &--show {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            &__image {
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            &__content {
+                &__name {
+                    font-weight: 600;
+                    line-height: 1.25;
+                    margin: 0;
+                    font-size: 14px;
+                }
+                .vcard-follow {
+                    padding: 0 8px;
+                    line-height: 1.5;
+                    font-size: 12px;
+                }
+            }
+        }
 
         @include mobile {
             display: none;
