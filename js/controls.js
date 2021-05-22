@@ -23,10 +23,8 @@
 
     window.document.addEventListener("scroll", () => {
       if (window.scrollY > visibleThreshold) {
-        console.log("open");
         vcard.classList.add(isOpenClass);
       } else {
-        console.log("cloase");
         vcard.classList.remove(isOpenClass);
       }
     });
