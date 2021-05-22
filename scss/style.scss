@@ -34,7 +34,7 @@ body {
                 display: block;
             }
             .bars {
-                fill: #fff;
+                fill: currentColor;
                 width: 24px;
                 height: 24px;
             }
@@ -90,6 +90,11 @@ body {
                 flex-direction: column;
                 align-items: flex-start;
             }
+        }
+
+        .is-open {
+            padding-top: 1rem;
+            display: flex;
         }
 
         &__item {

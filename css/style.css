@@ -31,7 +31,7 @@ body *:after {
   }
 }
 .header .header__top__wrapper .toggle .bars {
-  fill: #fff;
+  fill: currentColor;
   width: 24px;
   height: 24px;
 }
@@ -88,6 +88,10 @@ body *:after {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+.header__left .is-open {
+  padding-top: 1rem;
+  display: flex;
 }
 .header__left__item {
   font-weight: 600;
