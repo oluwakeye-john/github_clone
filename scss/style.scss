@@ -553,10 +553,15 @@ body {
     }
 
     &__name {
+        display: inline-block;
         color: $linkColor;
         font-weight: 600;
         font-size: 20px;
         margin: 0;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 
     &__base {
@@ -576,6 +581,7 @@ body {
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
+                border: 1px solid rgba(27, 31, 35, 0.15);
             }
         }
     }
@@ -595,6 +601,60 @@ body {
         svg {
             fill: #6a737d;
             margin-right: 4px;
+        }
+    }
+}
+
+.footer {
+    @include page-padding;
+    &__container {
+        border-top: 1px solid $borderColor;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        color: $textAlt2;
+        font-size: 12px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    &__side {
+        width: 41.66667%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 8px;
+            justify-content: center;
+        }
+
+        &__item {
+            color: $linkColor;
+
+            &--alt {
+                color: inherit;
+            }
+
+            @include mobile {
+                margin: 0 8px;
+            }
+        }
+    }
+    &__center {
+        margin: 0 24px;
+        svg {
+            fill: #d1d5da;
+        }
+        @include mobile {
+            display: none;
         }
     }
 }
