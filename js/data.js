@@ -1,7 +1,7 @@
 (function () {
   const graphqlQuery = `
 {
-    user(login: "John-pels") {
+    user(login: "oluwakeye-john") {
       login
       avatarUrl
       name
@@ -31,7 +31,7 @@
           forkCount
           isPrivate
           createdAt
-          languages(first:5){
+          languages(first:5, orderBy: {field: SIZE,direction:DESC}) {
             nodes{
               id
               name
@@ -56,7 +56,7 @@
     .then((data) => {
       const user = data.data.user;
       const repositories = user.repositories.nodes;
-      console.log(user);
+      //   console.log(user);
 
       document.title = `${user.login} (${user.name}) / Repositories`;
 
@@ -178,7 +178,9 @@
         const builder = `
         <div class="repository-card">
         <div class="repository-card__left">
-          <h4 class="repository-card__name">${repo.name}</h4>
+        <a href=${repo.url} target="_blank">
+        <h4 class="repository-card__name">${repo.name}</h4>
+        </a>
           <div class="repository-card__description">
             ${repo.description || ""}
           </div>
