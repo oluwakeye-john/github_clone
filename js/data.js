@@ -1,7 +1,9 @@
+// scoped
+
 (function () {
-  const graphqlQuery = `
-{
-    user(login: "oluwakeye-john") {
+  const getGraphQLQuery = (username) => {
+    return `{
+    user(login: "${username}") {
       login
       avatarUrl
       name
@@ -43,6 +45,13 @@
     }
   }
   `;
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchUsername = urlParams.get("username");
+  console.log({ searchUsername });
+
+  const query = getGraphQLQuery(searchUsername);
 
   fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -50,13 +59,13 @@
       "Content-Type": "application/json",
       authorization: `token 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 `,
     },
-    body: JSON.stringify({ query: graphqlQuery }),
+    body: JSON.stringify({ query }),
   })
     .then((data) => data.json())
     .then((data) => {
       const user = data.data.user;
       const repositories = user.repositories.nodes;
-      //   console.log(user);
+      console.log(user);
 
       document.title = `${user.login} (${user.name}) / Repositories`;
 
@@ -92,6 +101,10 @@
         "[data-user='status-message']"
       );
 
+      const repoCountElements = document.querySelectorAll(
+        "[data-user='repo-count']"
+      );
+
       fullnameElements.forEach((elem) => {
         elem.innerText = user.name;
       });
@@ -125,16 +138,19 @@
       });
 
       statusEmojiElements.forEach((elem) => {
-        elem.innerHTML = user.status.emojiHTML;
+        elem.innerHTML = user.status?.emojiHTML;
       });
 
       statusMessageElements.forEach((elem) => {
-        elem.innerText = user.status.message;
+        elem.innerText = user.status?.message;
+      });
+
+      repoCountElements.forEach((elem) => {
+        elem.innerText = repositories?.length || 0;
       });
 
       const repoParent = document.querySelector("[data-user='repositories']");
 
-      const weeks = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
       const months = [
         "Jan",
         "Feb",
@@ -153,7 +169,6 @@
       const formatDate = (val) => {
         const dt = new Date(val);
 
-        const weekDay = weeks[dt.getDay()];
         const month = months[dt.getMonth()];
         const date = dt.getDate();
         const year = dt.getFullYear();
@@ -207,5 +222,8 @@
         d.innerHTML = builder;
         repoParent.appendChild(d);
       });
+
+      document.querySelector(".page-loader").classList.add("hide");
+      document.querySelector(".page-data-content").classList.remove("hide");
     });
 })();

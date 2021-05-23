@@ -689,4 +689,29 @@ body *:after {
   }
 }
 
+.page-loader {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1.3);
+  }
+}
+.page-loader svg {
+  display: block;
+  animation: scale 1s infinite ease-in-out alternate;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */

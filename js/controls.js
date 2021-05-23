@@ -1,3 +1,5 @@
+// scoped
+
 (function () {
   function handleHamburger() {
     const hamburgerButton = document.querySelector("#mobile-hamburger");
