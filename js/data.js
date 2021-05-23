@@ -47,6 +47,12 @@
   `;
   };
 
+  const formatCount = (inp) => {
+    const value = Number(inp);
+    if (!value) return 0;
+    return value >= 1000 ? (value / 1000).toFixed(1) + "k" : value;
+  };
+
   const urlParams = new URLSearchParams(window.location.search);
   const searchUsername = urlParams.get("username");
   console.log({ searchUsername });
@@ -93,6 +99,10 @@
 
       const avatarElements = document.querySelectorAll("[data-user='avatar']");
 
+      const statusContainers = document.querySelectorAll(
+        "[data-user='status']"
+      );
+
       const statusEmojiElements = document.querySelectorAll(
         "[data-user='status-emoji']"
       );
@@ -122,19 +132,28 @@
       });
 
       followersElements.forEach((elem) => {
-        elem.innerText = `${user.followers.totalCount} followers `;
+        const fCount = user.followers.totalCount;
+        elem.innerHTML = `<strong>${formatCount(fCount)}</strong> followers`;
       });
 
       followingElements.forEach((elem) => {
-        elem.innerText = ` ${user.following.totalCount} following `;
+        const fCount = user.following.totalCount;
+        elem.innerHTML = `<strong>${formatCount(fCount)}</strong> following`;
       });
 
       starsElements.forEach((elem) => {
-        elem.innerText = user.starredRepositories.totalCount;
+        const fCount = user.starredRepositories.totalCount;
+        elem.innerHTML = `<strong>${formatCount(fCount)}</strong>`;
       });
 
       avatarElements.forEach((elem) => {
         elem.src = user.avatarUrl;
+      });
+
+      statusContainers.forEach((elem) => {
+        if (user.status) {
+          elem.classList.remove("hide");
+        }
       });
 
       statusEmojiElements.forEach((elem) => {
