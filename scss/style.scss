@@ -510,6 +510,27 @@ body {
         display: flex;
         align-items: center;
         margin-bottom: 16px;
+
+        flex-wrap: wrap;
+        color: $textAlt1;
+
+        svg {
+            fill: $textAlt1;
+            margin-right: 2px;
+            width: 16px;
+            height: 16px;
+        }
+        div {
+            margin-right: 2px;
+        }
+        span {
+            margin: 0 2px;
+        }
+        strong {
+            color: $textPrimary;
+            margin-right: 2px;
+            font-weight: 600;
+        }
     }
 
     &__bio {

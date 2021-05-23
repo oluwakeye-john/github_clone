@@ -496,6 +496,25 @@ body *:after {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  flex-wrap: wrap;
+  color: #586069;
+}
+.user-profile-mobile__stats svg {
+  fill: #586069;
+  margin-right: 2px;
+  width: 16px;
+  height: 16px;
+}
+.user-profile-mobile__stats div {
+  margin-right: 2px;
+}
+.user-profile-mobile__stats span {
+  margin: 0 2px;
+}
+.user-profile-mobile__stats strong {
+  color: #24292e;
+  margin-right: 2px;
+  font-weight: 600;
 }
 .user-profile-mobile__bio {
   font-size: 16px;

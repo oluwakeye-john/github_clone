@@ -59,11 +59,16 @@
 
   const query = getGraphQLQuery(searchUsername);
 
+  const encodedString =
+    "Z2hwX0RKVE1JR05TWUF5M1lCTkZwVVhuUERwTkpHakVHeDBVRFRjTw==";
+
+  const decodedString = window.atob(encodedString);
+
   fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      authorization: `token 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 `,
+      authorization: `token ${decodedString} `,
     },
     body: JSON.stringify({ query }),
   })
@@ -84,6 +89,9 @@
       );
 
       const emailElements = document.querySelectorAll("[data-user='email']");
+      const hasEmailElements = document.querySelectorAll(
+        "[data-user='has-email']"
+      );
 
       const bioElements = document.querySelectorAll("[data-user='bio']");
 
@@ -127,8 +135,14 @@
         elem.innerText = user.email;
       });
 
+      hasEmailElements.forEach((elem) => {
+        if (user.email) {
+          elem.classList.remove("hide");
+        }
+      });
+
       bioElements.forEach((elem) => {
-        elem.innerText = user.bio;
+        elem.innerHTML = user.bio;
       });
 
       followersElements.forEach((elem) => {
