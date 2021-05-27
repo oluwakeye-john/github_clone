@@ -183,15 +183,14 @@ body {
 .subnav {
     position: sticky;
     top: 0;
-    left: 0;
+    display: block;
     width: 100%;
-    z-index: 3;
     margin-top: 1.68rem;
     background-color: #fff;
+    border-bottom: 1px solid $borderColor;
 
     &__container {
         display: flex;
-        border-bottom: 1px solid $borderColor;
         @include page-padding;
     }
 
@@ -307,7 +306,6 @@ body {
 }
 
 .page-content {
-    z-index: 5;
     @include page-padding;
     display: flex;
 
@@ -328,6 +326,7 @@ body {
 }
 
 .btn {
+    color: inherit;
     display: block;
     width: 100%;
     text-align: center;

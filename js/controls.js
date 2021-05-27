@@ -21,7 +21,7 @@
     const vcard = document.querySelector("#desktop-vcard");
     const isOpenClass = "show-vcard";
 
-    const visibleThreshold = 330;
+    const visibleThreshold = 385;
 
     window.document.addEventListener("scroll", () => {
       if (window.scrollY > visibleThreshold) {

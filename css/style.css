@@ -173,15 +173,14 @@ body *:after {
 .subnav {
   position: sticky;
   top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  z-index: 3;
   margin-top: 1.68rem;
   background-color: #fff;
+  border-bottom: 1px solid #eaecef;
 }
 .subnav__container {
   display: flex;
-  border-bottom: 1px solid #eaecef;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
@@ -291,7 +290,6 @@ body *:after {
 }
 
 .page-content {
-  z-index: 5;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
@@ -320,6 +318,7 @@ body *:after {
 }
 
 .btn {
+  color: inherit;
   display: block;
   width: 100%;
   text-align: center;
