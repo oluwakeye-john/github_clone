@@ -75,6 +75,14 @@
     .then((data) => data.json())
     .then((data) => {
       const user = data.data.user;
+
+      if (!user) {
+        console.log("not found");
+        //if user is not found
+        document.querySelector(".page-error-content").classList.remove("hide");
+        return;
+      }
+
       const repositories = user.repositories.nodes;
       console.log(user);
 
@@ -255,8 +263,9 @@
         d.innerHTML = builder;
         repoParent.appendChild(d);
       });
-
-      document.querySelector(".page-loader").classList.add("hide");
       document.querySelector(".page-data-content").classList.remove("hide");
+    })
+    .finally(() => {
+      document.querySelector(".page-loader").classList.add("hide");
     });
 })();
